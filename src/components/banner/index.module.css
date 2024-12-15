@@ -1,0 +1,30 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    color: #fff; 
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .banner-content {
+    z-index: 1; 
+  }
+  
+  .banner-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0 0 1rem;
+  }
+  
+  .banner-text {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8); 
+  }
+  
