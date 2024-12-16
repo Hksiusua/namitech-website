@@ -23,7 +23,9 @@
 .header-left:hover {
   opacity: 1; 
   transform: translateX(10px); 
+
 }
+
 
 .logo-container {
   position: relative;
@@ -47,6 +49,9 @@
   flex-direction: row;
   transition: width 3s ease;
 }
+.menu-items:hover .separator {
+  visibility: hidden;
+}
 
 .page-number {
   font-size: 16px;
@@ -60,7 +65,6 @@
   margin-right: 5px;
 }
 
-
 .submenu {
   top: 100%;
   left: 0;
@@ -69,14 +73,11 @@
   white-space: nowrap;
   z-index: 10;
   flex-direction: row;
-  
-  /* Bắt đầu với opacity là 0 và dịch chuyển sang dưới */
   visibility: hidden;
   transform: translateY(10px);
   transition: visibility 0.3s ease, transform 0.3s ease;
 }
 
-/* Khi submenu được hiển thị, opacity sẽ chuyển sang 1 và dịch chuyển lên */
 .header-left.expanded .submenu {
   visibility: visible;
   transform: translateY(0);
@@ -152,8 +153,7 @@
   }
   .header-left.expanded .menu-items .submenu{
     position: absolute;
-    top: 70px;
-    left: 20px;
+    
   }
 }
 
@@ -237,17 +237,27 @@
 .product-menu {
   position: absolute;
   top: 110%;
-  left: -600%; 
+  left: 10%; 
   transform: translateX(-78%);
   background: rgba(17, 17, 17, 0.9);
   border-radius: 8px;
-  padding: 10px;
+  padding: 5px;
+  z-index: 100;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 5px;
   width: 550px;
 }
 
+@media (max-width: 640px) { 
+  .product-menu {
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(3, auto); 
+    width: 360px;
+    top: 110%;
+    left: 50%;
+  }
+}
 
 .dropdown-containerRight .product-menu {
   display: grid; 
@@ -257,22 +267,8 @@
   position: relative;
 }
 
-
 .animated-button:hover {
   background: rgba(255, 255, 255, 0.2);
-}
-
-.product-menu {
-  position: absolute;
-  left: 10%;
-  background: rgba(17, 24, 39, 0.9); 
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-wrap: wrap; 
-  gap: 10px;
-   z-index: 10;
 }
 
 .menu-item {
@@ -337,6 +333,11 @@
 
 .animated-button.active::before {
   transform: translate(-50%, -50%) scale(1);
+}
+
+.animated-button.active {
+  color: black; 
+  background-color: #fff;
 }
 
 @media (max-width: 1024px) { 

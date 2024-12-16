@@ -1,0 +1,53 @@
+.contact-container {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100px;
+    width: 40px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 50;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-container:hover {
+    background-color: #5bc4ea;
+    color: black;
+  }
+  
+  .contact-container::before {
+    content: "";
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 60%);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 1.2s ease;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  
+  .contact-container:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+ 
+  .contact-text {
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
