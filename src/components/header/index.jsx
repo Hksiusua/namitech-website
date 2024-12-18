@@ -10,6 +10,8 @@ function Header() {
   const [isHovered, setIsHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isIconOpen, setIsIconMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const scrolledClass = isScrolled ? styles["scrolled"] : "";
 
   const handleResize = () => {
     if (window.innerWidth > 1024) {
@@ -18,13 +20,24 @@ function Header() {
       setIsIconMenuOpen(false); 
     }
   };
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY; 
+    const viewportHeight = window.innerHeight; 
+    if (scrollPosition > 0.98 * viewportHeight) { 
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };  
   
   useEffect(() => {
     handleResize();  
     window.addEventListener("resize", handleResize); 
-  
+    window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   
@@ -48,9 +61,9 @@ function Header() {
             className={styles["logo"]}
             style={{ backgroundImage: `url(${logo})` }}></div>
         </div>
-          <div className={styles["menu-items"]}>
-            <span className={styles["page-number"]}>1/5</span>
-            <span className={styles["separator"]}>•</span>
+          <div className={`${styles["menu-items"]} ${scrolledClass}`}>
+            <span className={`${styles["page-number"]} ${scrolledClass}`}>1/5</span>
+            <span className={`${styles["separator"]} ${scrolledClass}`}>•</span>
             <span className={styles["menu-itemLeftMain"]}>Overview</span>
           {isHovered && (
             <div className={styles["submenu"]}>
@@ -61,8 +74,8 @@ function Header() {
           )}
         </div>
       </div>
-      <div className={styles["header-right"]}>
-        <div className={styles["headerRight-icon"]}>
+      <div className={`${styles["header-right"]}`}>
+        <div className={styles["headerRight-icon"]} >
           <button
             type="button"
             onClick={toggleIconMenu}
@@ -84,20 +97,20 @@ function Header() {
                 : styles["inline-menu"]
             }
           >
-            <span className={styles["menu-itemRigth"]}>Company</span>
-            <span className={styles["menu-itemRigth"]}>Resources</span>
-            <span className={styles["menu-itemRigth"]}>News</span>
+            <span className={`${styles["menu-itemRigth"]} ${scrolledClass}`}>Company</span>
+            <span className={`${styles["menu-itemRigth"]} ${scrolledClass}`}>Resources</span>
+            <span className={`${styles["menu-itemRigth"]} ${scrolledClass}`}>News</span>
 
             <div className={styles["social-icons"]}>
-            <span className={styles["separator"]}>•</span>
-              <FontAwesomeIcon icon={faFacebook} className={styles["social-icon"]} />
-              <FontAwesomeIcon icon={faLinkedin} className={styles["social-icon"]} />
-              <FontAwesomeIcon icon={faYoutube} className={styles["social-icon"]} />
-              <span className={styles["separator"]}>•</span>
-            </div>
+            <span className={`${styles["separator"]} ${scrolledClass}`}>•</span>
+              <FontAwesomeIcon icon={faFacebook} className={`${styles["social-icon"]} ${scrolledClass}`} />
+              <FontAwesomeIcon icon={faLinkedin} className={`${styles["social-icon"]} ${scrolledClass}`} />
+              <FontAwesomeIcon icon={faYoutube} className={`${styles["social-icon"]} ${scrolledClass}`} />
+              <span className={`${styles["separator"]} ${scrolledClass}`}>•</span>
+              </div>
             <div className={styles["dropdown-containerRight"]}>
                 <button 
-                  className={`${styles["animated-button"]} ${isOpen ? styles["active"] : ""}`}
+                  className={`${styles["animated-button"]} ${isOpen ? styles["active"] : ""} ${scrolledClass}`}
                   onClick={toggleMenu}
                   >
                   Products <DownOutlined className={styles["icon-spacing"]} />
