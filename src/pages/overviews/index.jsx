@@ -4,6 +4,7 @@ import Banner from "../../components/banner";
 import styles from "./index.module.css";
 import Contact from "../../components/contact";
 import TransformConversation from "../../components/transformConversation";
+import ReasonNamitech from "../../components/reasonNamitech";
 
 function OverView() {
   const [scrollState, setScrollState] = useState({
@@ -72,6 +73,10 @@ function OverView() {
       >
         <TransformConversation />
       </div>
+      
+      <div>
+        <ReasonNamitech/>
+      </div> 
     </div>
   );
 }
