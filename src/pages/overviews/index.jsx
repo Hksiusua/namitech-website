@@ -5,6 +5,7 @@ import styles from "./index.module.css";
 import Contact from "../../components/contact";
 import TransformConversation from "../../components/transformConversation";
 import ReasonNamitech from "../../components/reasonNamitech";
+import KeyTechnology from "../../components/keyTechnology";
 
 function OverView() {
   const [scrollState, setScrollState] = useState({
@@ -77,6 +78,10 @@ function OverView() {
       <div>
         <ReasonNamitech/>
       </div> 
+
+      <div>
+        <KeyTechnology/>
+      </div>
     </div>
   );
 }

@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 import { Card, Row, Col, Drawer  } from "antd";
 import { ArrowLeftOutlined, ArrowRightOutlined, ArrowRightOutlined as CardArrow } from "@ant-design/icons";
 import { UpSquareOutlined } from "@ant-design/icons";
+import { TwitterOutlined } from "@ant-design/icons";
+
 const { Meta } = Card;
-function ReasonNamitech(){
+function KeyTechnology(){
     const [visible, setVisible] = useState(false);
     const [isClosable, setIsClosable] = useState(false); 
     const [showCustomClose, setShowCustomClose] = useState(true);
@@ -43,7 +45,7 @@ function ReasonNamitech(){
       ];
   return(
     <div className="h-full lg:h-screen w-full ">
-        <div className="w-full h-full grid grid-cols-12 bg-[#4675D8]">
+        <div className="w-full h-full grid grid-cols-12 py-[16px] bg-[#053835]">
             <div className="w-full h-full col-span-12 lg:col-span-4 flex flex-col justify-center items-center mt-[60px] mb-[100px]">
                 <div className="relative w-[150px] h-[150px] flex justify-center items-center">
                 <div className="absolute inset-[-55px] sm:inset-[-50px] lg:inset-[-70px] rounded-full border border-[rgba(255,255,255,0.2)] animate-spin-slow">
@@ -54,9 +56,9 @@ function ReasonNamitech(){
                     <div className="absolute inset-[-20px] rounded-full border-[10px] "
                         style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}>
                         <div className="absolute inset-0 flex justify-center items-center">
-                            <div className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-[4px] h-[10px] bg-[#4675D8]"></div>
-                            <div className="absolute left-[-5px] top-1/4 w-[20px] h-[4px] bg-[#4675D8] rotate-[30deg]"></div>
-                            <div className="absolute right-[-5px] top-1/4 w-[20px] h-[4px] bg-[#4675D8] rotate-[-30deg]"></div>
+                            <div className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-[4px] h-[10px] bg-[#053835]"></div>
+                            <div className="absolute left-[-5px] top-1/4 w-[20px] h-[4px] bg-[#053835] rotate-[30deg]"></div>
+                            <div className="absolute right-[-5px] top-1/4 w-[20px] h-[4px] bg-[#053835] rotate-[-30deg]"></div>
                         </div>
                     </div>
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-red-500 to-yellow-400 animate-spin-slow"></div>
@@ -73,52 +75,90 @@ function ReasonNamitech(){
                         </svg>
                 </div>
                 <div className="mt-20">
-                    <h2 className="text-2xl font-semibold border-t-[3px] border-b-[3px] border-white py-2 text-white">
+                    <h2 className="text-2xl font-semibold border-t-[3px] border-b-[3px] border-white py-4 text-white">
                          WHY NAMITECH
                     </h2>
                 </div>
             </div>
-            <div className="w-full h-full col-span-12 lg:col-span-8 flex flex-col justify-center items-center  rounded-lg "
+            <div className="w-full h-full col-span-12 lg:col-span-8 flex flex-col justify-center items-center rounded-lg p-[16px]"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}>
                 <div className="p-4 w-full ">
                     <h1 className="border-b-[1px] border-white text-white inline-block pb-2 text-2xl">
                         Case Study
                     </h1>
                 </div>
-                <div className="p-4 w-full">
-                    <Row gutter={[16, 16]}>
-                    {data.map((item, index) => (
-                        <Col xs={24} sm={12} lg={8} key={index}>
-                        <Card
-                            hoverable
-                            cover={<img alt={item.title} src={item.image} className="h-64 object-cover" />}
-                            style={{ borderRadius: "12px", backgroundColor: "#3E5F8E" }}
-                            bodyStyle={{ color: "#fff", padding: "16px", minHeight: "230px" }}
-                        >
-                            <Meta
-                            title={<span style={{ color: "#fff", fontWeight: "bold" }}>{item.title}</span>}
-                            description={
-                                <span style={{ color: "rgba(255, 255, 255, 0.7)" }}>{item.description}</span>
-                            }
-                            />
-                            <div onClick={() => setVisible(true)}
-                                style={{ position: "absolute", bottom: "16px", right: "16px", cursor: "pointer" }}>
-                            <CardArrow
-                                style={{
-                                fontSize: "18px",
-                                color: "rgba(255, 255, 255, 0.8)",
-                                border: "1px solid rgba(255, 255, 255, 0.5)",
-                                borderRadius: "50%",
-                                padding: "6px",
-                                transform: "rotate(-40deg)",
-                                }}
-                            />
-                            </div>
-                        </Card>
-                        </Col>
-                    ))}
-                    </Row>
+                <div className="px-[50px] gap-[16px] w-full h-full flex flex-col grid grid-cols-1 lg:grid-cols-3">
+                    <div className="col-span-1 bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg">
+                        <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
+                            <TwitterOutlined className="text-white text-2xl" />
+                        </div>
+
+                        <h3 className="text-lg font-semibold mb-2">Speech Enhancement</h3>
+
+                        <p className="text-sm text-gray-300">
+                            Outperforming Microsoft & Zoom in Noise Suppression
+                        </p>
+                    </div>
+                    <div className="col-span-1 bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg">
+                        <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
+                            <TwitterOutlined className="text-white text-2xl" />
+                        </div>
+
+                        <h3 className="text-lg font-semibold mb-2">Speech Enhancement</h3>
+
+                        <p className="text-sm text-gray-300">
+                            Outperforming Microsoft & Zoom in Noise Suppression
+                        </p>
+                    </div>
+                    <div className="col-span-1 bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg">
+                        <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
+                            <TwitterOutlined className="text-white text-2xl" />
+                        </div>
+
+                        <h3 className="text-lg font-semibold mb-2">Speech Enhancement</h3>
+
+                        <p className="text-sm text-gray-300">
+                            Outperforming Microsoft & Zoom in Noise Suppression
+                        </p>
+                    </div>
                 </div>
+
+                <div className="px-[50px] py-[10px] gap-[16px] w-full h-full flex flex-col grid grid-cols-1 lg:grid-cols-3">
+                    <div className="col-span-1 bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg">
+                        <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
+                            <TwitterOutlined className="text-white text-2xl" />
+                        </div>
+
+                        <h3 className="text-lg font-semibold mb-2">Speech Enhancement</h3>
+
+                        <p className="text-sm text-gray-300">
+                            Outperforming Microsoft & Zoom in Noise Suppression
+                        </p>
+                    </div>
+                    <div className="col-span-1 bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg">
+                        <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
+                            <TwitterOutlined className="text-white text-2xl" />
+                        </div>
+
+                        <h3 className="text-lg font-semibold mb-2">Speech Enhancement</h3>
+
+                        <p className="text-sm text-gray-300">
+                            Outperforming Microsoft & Zoom in Noise Suppression
+                        </p>
+                    </div>
+                    <div className="col-span-1 bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg">
+                        <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
+                            <TwitterOutlined className="text-white text-2xl" />
+                        </div>
+
+                        <h3 className="text-lg font-semibold mb-2">Speech Enhancement</h3>
+
+                        <p className="text-sm text-gray-300">
+                            Outperforming Microsoft & Zoom in Noise Suppression
+                        </p>
+                    </div>
+                </div>
+
                 <div className="flex justify-end gap-4 w-full pr-[15px]">
                     <button className="w-10 h-10 flex justify-center items-center bg-[rgba(255,255,255,0.1)] text-[rgba(255,255,255,0.7)] border border-[rgba(255,255,255,0.5)] rounded">
                         <ArrowLeftOutlined />
@@ -224,4 +264,4 @@ function ReasonNamitech(){
  )
 }
 
-export default ReasonNamitech
+export default KeyTechnology
