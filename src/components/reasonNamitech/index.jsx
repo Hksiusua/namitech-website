@@ -44,7 +44,7 @@ function ReasonNamitech(){
   return(
     <div className="h-full lg:h-screen w-full ">
         <div className="w-full h-full grid grid-cols-12 bg-[#4675D8]">
-            <div className="w-full h-full col-span-12 lg:col-span-4 flex flex-col justify-center items-center mt-[60px] mb-[100px]">
+            <div className="w-full h-full col-span-12 lg:col-span-4 flex flex-col justify-center items-center py-[80px]">
                 <div className="relative w-[150px] h-[150px] flex justify-center items-center">
                 <div className="absolute inset-[-55px] sm:inset-[-50px] lg:inset-[-70px] rounded-full border border-[rgba(255,255,255,0.2)] animate-spin-slow">
                         <div className="absolute top-1/4 left-[9px] w-[10px] h-[10px] bg-yellow-400 rounded-full"></div>

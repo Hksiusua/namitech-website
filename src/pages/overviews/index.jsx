@@ -6,6 +6,12 @@ import Contact from "../../components/contact";
 import TransformConversation from "../../components/transformConversation";
 import ReasonNamitech from "../../components/reasonNamitech";
 import KeyTechnology from "../../components/keyTechnology";
+import OurTeam from "../../components/ourTeam";
+import OurProducts from "../../components/ourProducts";
+import OurProductsMaterial from "../../components/ourProductMaterial";
+import TheTeam from "../../components/theTeam";
+import ActivitiesTeam from "../../components/activitiesTeam";
+import Footer from "../../components/footer";
 
 function OverView() {
   const [scrollState, setScrollState] = useState({
@@ -81,6 +87,30 @@ function OverView() {
 
       <div>
         <KeyTechnology/>
+      </div>
+
+      <div>
+        <OurTeam/>
+      </div>
+
+      <div>
+        <OurProducts/>
+      </div>
+
+      <div>
+        <OurProductsMaterial/>
+      </div>
+
+      <div>
+        <TheTeam/>
+      </div>
+
+      <div>
+        <ActivitiesTeam/>
+      </div>
+
+      <div>
+        <Footer/>
       </div>
     </div>
   );

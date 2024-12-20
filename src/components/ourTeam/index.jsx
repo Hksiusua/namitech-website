@@ -3,10 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Card, Row, Col, Drawer  } from "antd";
 import { ArrowLeftOutlined, ArrowRightOutlined, ArrowRightOutlined as CardArrow } from "@ant-design/icons";
 import { UpSquareOutlined } from "@ant-design/icons";
-import { TwitterOutlined } from "@ant-design/icons";
-
 const { Meta } = Card;
-function KeyTechnology(){
+function OurTeam(){
     const [visible, setVisible] = useState(false);
     const [isClosable, setIsClosable] = useState(false); 
     const [showCustomClose, setShowCustomClose] = useState(true);
@@ -45,7 +43,7 @@ function KeyTechnology(){
       ];
   return(
     <div className="h-full lg:h-screen w-full ">
-        <div className="w-full h-full grid grid-cols-12  bg-[#053835]">
+        <div className="w-full h-full grid grid-cols-12 bg-[#066651]">
             <div className="w-full h-full col-span-12 lg:col-span-4 flex flex-col justify-center items-center py-[80px]">
                 <div className="relative w-[150px] h-[150px] flex justify-center items-center">
                 <div className="absolute inset-[-55px] sm:inset-[-50px] lg:inset-[-70px] rounded-full border border-[rgba(255,255,255,0.2)] animate-spin-slow">
@@ -56,13 +54,13 @@ function KeyTechnology(){
                     <div className="absolute inset-[-20px] rounded-full border-[10px] "
                         style={{ borderColor: "rgba(255, 255, 255, 0.2)" }}>
                         <div className="absolute inset-0 flex justify-center items-center">
-                            <div className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-[4px] h-[10px] bg-[#053835]"></div>
-                            <div className="absolute left-[-5px] top-1/4 w-[20px] h-[4px] bg-[#053835] rotate-[30deg]"></div>
-                            <div className="absolute right-[-5px] top-1/4 w-[20px] h-[4px] bg-[#053835] rotate-[-30deg]"></div>
+                            <div className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-[4px] h-[10px] bg-[#066651]"></div>
+                            <div className="absolute left-[-5px] top-1/4 w-[20px] h-[4px] bg-[#066651] rotate-[30deg]"></div>
+                            <div className="absolute right-[-5px] top-1/4 w-[20px] h-[4px] bg-[#066651] rotate-[-30deg]"></div>
                         </div>
                     </div>
                     <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500 via-red-500 to-yellow-400 animate-spin-slow"></div>
-                    <div className="absolute inset-[1px] rounded-full bg-[#053835]"></div>
+                    <div className="absolute inset-[1px] rounded-full bg-[#066651]"></div>
                         <svg
                         className="w-[80px] h-[80px] text-gray-300 z-10"
                         fill="none"
@@ -75,97 +73,58 @@ function KeyTechnology(){
                         </svg>
                 </div>
                 <div className="mt-20">
-                    <h2 className="text-2xl font-semibold border-t-[3px] border-b-[3px] border-white py-4 text-white">
-                         KEY TECHNOLOGY
+                    <h2 className="text-2xl font-semibold border-t-[3px] border-b-[3px] border-white py-2 text-white">
+                         OUR TEAM
                     </h2>
                 </div>
             </div>
-            <div className="w-full h-full col-span-12 lg:col-span-8 flex flex-col justify-center items-center rounded-lg p-[50px]"
+            <div className="w-full h-full col-span-12 lg:col-span-8 flex flex-col justify-center items-center rounded-lg px-[50px]"
                 style={{ backgroundColor: "rgba(255, 255, 255, 0.2)" }}>
                 <div className="p-4 w-full ">
                     <h1 className="border-b-[1px] border-white text-white inline-block pb-2 text-2xl">
                         Case Study
                     </h1>
                 </div>
-                <div className=" p-4 gap-[16px] w-full h-full flex flex-col grid grid-cols-1 lg:grid-cols-3 ">
-                    <div className="col-span-1 bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg">
-                        <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
-                            <TwitterOutlined className="text-white text-2xl" />
+                <div className="p-4 w-full h-auto">
+                    <div className="gap-[20px] flex flex-col grid grid-cols-1 lg:grid-cols-2">
+                        <div className="bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg col-span-1">
+                            <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
+                                <UpSquareOutlined className="text-white text-4xl opacity-40" />
+                            </div>
+                            <h3 className="text-3xl font-bold mb-2">150M+</h3>
+                            <p className="text-sm text-gray-300">Conversations processed</p>
                         </div>
-
-                        <h3 className="text-lg font-semibold mb-2">Speech Enhancement</h3>
-
-                        <p className="text-sm text-gray-300">
-                            Outperforming Microsoft & Zoom in Noise Suppression
-                        </p>
-                    </div>
-                    <div className="col-span-1 bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg">
-                        <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
-                            <TwitterOutlined className="text-white text-2xl" />
+                        <div className="bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg col-span-1">
+                            <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
+                                <UpSquareOutlined className="text-white text-4xl opacity-40" />
+                            </div>
+                            <h3 className="text-3xl font-bold mb-2">150M+</h3>
+                            <p className="text-sm text-gray-300">Conversations processed</p>
                         </div>
-
-                        <h3 className="text-lg font-semibold mb-2">Speech Enhancement</h3>
-
-                        <p className="text-sm text-gray-300">
-                            Outperforming Microsoft & Zoom in Noise Suppression
-                        </p>
                     </div>
-                    <div className="col-span-1 bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg">
-                        <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
-                            <TwitterOutlined className="text-white text-2xl" />
+                    <div className=" gap-[20px] py-[20px] flex flex-col grid grid-cols-1 lg:grid-cols-3">
+                        <div className="bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg col-span-1">
+                            <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
+                                <UpSquareOutlined className="text-white text-4xl opacity-40" />
+                            </div>
+                            <h3 className="text-3xl font-bold mb-2">150M+</h3>
+                            <p className="text-sm text-gray-300">Conversations processed</p>
                         </div>
-
-                        <h3 className="text-lg font-semibold mb-2">Speech Enhancement</h3>
-
-                        <p className="text-sm text-gray-300">
-                            Outperforming Microsoft & Zoom in Noise Suppression
-                        </p>
-                    </div>
-                </div>
-
-                <div className=" p-4 py-[10px] gap-[16px] w-full h-full flex flex-col grid grid-cols-1 lg:grid-cols-3">
-                    <div className="col-span-1 bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg">
-                        <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
-                            <TwitterOutlined className="text-white text-2xl" />
+                        <div className="bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg col-span-1">
+                            <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
+                                <UpSquareOutlined className="text-white text-4xl opacity-40" />
+                            </div>
+                            <h3 className="text-3xl font-bold mb-2">150M+</h3>
+                            <p className="text-sm text-gray-300">Conversations processed</p>
                         </div>
-
-                        <h3 className="text-lg font-semibold mb-2">Speech Enhancement</h3>
-
-                        <p className="text-sm text-gray-300">
-                            Outperforming Microsoft & Zoom in Noise Suppression
-                        </p>
-                    </div>
-                    <div className="col-span-1 bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg">
-                        <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
-                            <TwitterOutlined className="text-white text-2xl" />
+                        <div className="bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg col-span-1">
+                            <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
+                                <UpSquareOutlined className="text-white text-4xl opacity-40" />
+                            </div>
+                            <h3 className="text-3xl font-bold mb-2">150M+</h3>
+                            <p className="text-sm text-gray-300">Conversations processed</p>
                         </div>
-
-                        <h3 className="text-lg font-semibold mb-2">Speech Enhancement</h3>
-
-                        <p className="text-sm text-gray-300">
-                            Outperforming Microsoft & Zoom in Noise Suppression
-                        </p>
                     </div>
-                    <div className="col-span-1 bg-gradient-to-br from-blue-900 to-gray-900 text-white p-6 rounded-lg shadow-lg">
-                        <div className="flex items-center justify-center w-16 h-16 bg-white bg-opacity-10 rounded-lg mb-4">
-                            <TwitterOutlined className="text-white text-2xl" />
-                        </div>
-
-                        <h3 className="text-lg font-semibold mb-2">Speech Enhancement</h3>
-
-                        <p className="text-sm text-gray-300">
-                            Outperforming Microsoft & Zoom in Noise Suppression
-                        </p>
-                    </div>
-                </div>
-
-                <div className="flex justify-end gap-4 w-full pr-[15px]">
-                    <button className="w-10 h-10 flex justify-center items-center bg-[rgba(255,255,255,0.1)] text-[rgba(255,255,255,0.7)] border border-[rgba(255,255,255,0.5)] rounded">
-                        <ArrowLeftOutlined />
-                    </button>
-                    <button className="w-10 h-10 flex justify-center items-center bg-[rgba(255,255,255,0.1)] text-[rgba(255,255,255,0.7)] border border-[rgba(255,255,255,0.5)] rounded">
-                        <ArrowRightOutlined />
-                    </button>
                 </div>
             </div>                                    
         </div>
@@ -264,4 +223,4 @@ function KeyTechnology(){
  )
 }
 
-export default KeyTechnology
+export default OurTeam
